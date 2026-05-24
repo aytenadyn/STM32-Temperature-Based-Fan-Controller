@@ -27,3 +27,4 @@ build/
 .DS_Store
 __MACOSX/*.launch
 *.launch
+.metadata/

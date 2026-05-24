@@ -8,9 +8,24 @@ The system reads temperature data from a DHT11 sensor and controls a DC fan usin
 
 ![Circuit Diagram](images/circuit_diagram.png)
 
+## Repository Structure
+
+```text
+Core/                  Bare-metal application source files
+Drivers/               Bare-metal project driver files
+HAL_Version/           HAL-based implementation
+images/                Circuit diagram and project images
+README.md              Project documentation
+```
+
 ## Project Versions
 
-This repository includes the bare-metal version of the project. A HAL-based version will also be added separately.
+This repository includes two implementation versions of the temperature-based fan controller:
+
+| Version | Description |
+|---|---|
+| Bare-metal version | Uses direct register access without HAL functions in the application logic. |
+| HAL version | Uses STM32 HAL library functions for peripheral initialization and control. |
 
 ## Target Board
 
@@ -70,9 +85,10 @@ Alarm threshold: 28°C
 
 - STM32CubeIDE
 - Bare-metal C
+- STM32 HAL Library
 - CMSIS register-level programming
-- ITM/SWO for data logging
-- Proteus / schematic design tool for circuit documentation
+- UART / ITM-SWO data logging
+- KiCad / schematic design tool for circuit documentation
 
 ## Bare-Metal Implementation
 
@@ -86,6 +102,19 @@ Main peripherals used in the project:
 - I2C1 LCD communication
 - DWT delay
 - ITM/SWO logging
+
+## HAL Implementation
+
+The HAL version implements the same temperature-based fan control logic using STM32 HAL library functions. Peripheral initialization and control are handled through HAL-based functions generated and configured in STM32CubeIDE.
+
+Main peripherals used in the HAL version:
+
+- GPIO
+- TIM2 PWM
+- TIM3 interrupt-based buzzer control
+- TIM4 microsecond delay timer
+- I2C1 LCD communication
+- USART2 UART data logging
 
 ## How to Run
 
