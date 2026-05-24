@@ -6,7 +6,7 @@ The system reads temperature data from a DHT11 sensor and controls a DC fan usin
 
 ## Circuit Diagram
 
-![Circuit Diagram](images/circuit_diagram.png)
+![Circuit Diagram](images/circuit_diagram.svg)
 
 ## Repository Structure
 
