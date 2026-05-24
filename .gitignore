@@ -26,3 +26,4 @@ build/
 # macOS files
 .DS_Store
 __MACOSX/*.launch
+*.launch
