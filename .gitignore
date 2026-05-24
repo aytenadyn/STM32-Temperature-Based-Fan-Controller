@@ -1,0 +1,28 @@
+# Build output folders
+Debug/
+Release/
+build/
+
+# Compiled / generated files
+*.o
+*.d
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.su
+*.cyclo
+
+# STM32CubeIDE local settings
+.settings/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*~
+
+# macOS files
+.DS_Store
+__MACOSX/*.launch
